@@ -22,7 +22,12 @@ fetch("https://api.coingecko.com/api/v3/coins/dogecoin")
 
         document.getElementById("crypto-top").innerHTML = `
             <img src=${data.image.small} />
-            <span>${data.name}</span>
+            <span>${data.name}</span>     
         `
+        document.getElementById("crypto").innerHTML += `
+        <p>🎯: ${data.market_data.current_price.usd}</p>
+        <p>👆: </p>
+        <p>👇: </p>
+    `
     })
     .catch(err => console.error(err))
